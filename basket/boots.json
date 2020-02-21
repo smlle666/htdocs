@@ -1,0 +1,86 @@
+{
+    "1": {
+    "name" : "boot",
+    "cost": 12,
+    "description": "something",
+    "image": "images/shoes/boot1.jpg",
+    "size": "size: 39-41"
+},
+    "2": {
+    "name" : "boot",
+    "cost": 12,
+    "description": "something",
+    "image": "images/shoes/boot2.jpg",
+    "size": "size: 39-41"
+}, 
+    "3": {
+    "name" : "boot",
+    "cost": 27,
+    "description": "something",
+    "image": "images/shoes/boot3.jpg",
+    "size": "size: 39-41"
+}, 
+    "4": {
+    "name" : "boot",
+    "cost": 5,
+    "description": "something",
+    "image": "images/shoes/kid1.jpg",
+    "size": "size: 39-41"
+},  
+    "5": {
+    "name" : "boot",
+    "cost": 12,
+    "description": "something",
+    "image": "images/shoes/kid2.jpg",
+    "size": "size: 39-41"
+},  
+    "6": {
+    "name" : "boot",
+    "cost": 2,
+    "description": "something",
+    "image": "images/shoes/kid3.jpg",
+    "size": "size: 39-41"
+},
+    "7": {
+    "name" : "boot",
+    "cost": 12,
+    "description": "something",
+    "image": "images/shoes/shoe1.jpg",
+    "size": "size: 39-41"
+},  
+    "8": {
+    "name" : "boot",
+    "cost": 12,
+    "description": "something",
+    "image": "images/shoes/shoe2.jpg",
+    "size": "size: 39-41"
+},
+      "9": {
+    "name" : "boot",
+    "cost": 8,
+    "description": "something",
+    "image": "images/shoes/shoe3.jpg",
+    "size": "size: 39-41"
+},
+      "10": {
+    "name" : "boot",
+    "cost": 9,
+    "description": "something",
+    "image": "images/shoes/woman1.jpg",
+    "size": "size: 39-41"
+},
+      "11": {
+    "name" : "boot",
+    "cost": 102,
+    "description": "something",
+    "image": "images/shoes/woman2.jpg",
+    "size": "size: 39-41"
+},
+      "12": {
+    "name" : "boot",
+    "cost": 112,
+    "description": "something",
+    "image": "images/shoes/woman3.jpg",
+    "size": "size: 39-41"
+}
+}

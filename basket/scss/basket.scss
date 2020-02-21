@@ -1,0 +1,292 @@
+$desktopSize:1366;
+
+@function responsiveSize($mockupSize, $viewportSize) {
+  $result: $mockupSize / ($viewportSize / 100);
+  @return $result + vw;
+}
+
+@mixin fontTitle() {
+  font-weight: 600;
+  font-size: responsiveSize(32, $desktopSize);
+  margin-top: responsiveSize(100,$desktopSize);
+}
+
+@mixin fontDescription() {
+  font-size: responsiveSize(24, $desktopSize);
+  margin: responsiveSize(50,$desktopSize) 0;
+}
+
+html {
+  font-size: 32px;
+  overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.header__wrap {
+  background-color: #e9e9e9;
+  width: 100%;
+}
+
+.header__navbar {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: responsiveSize(5, $desktopSize);
+}
+
+.header__logo {
+  width: responsiveSize(60, $desktopSize);
+  height: responsiveSize(50, $desktopSize);
+
+  a {
+    display: block;
+    background: URL("../images/logo.png") center no-repeat;
+    background-size: cover;
+    width: responsiveSize(35, $desktopSize);
+    height: responsiveSize(29, $desktopSize);
+    margin-top: responsiveSize(2, $desktopSize);
+  }
+}
+
+.header__search {
+  display: none;
+  width: responsiveSize(800, $desktopSize);
+  background-color: #10c9c3;
+  height: responsiveSize(50, $desktopSize);
+}
+
+#search__button {
+  color: #fff;
+  border: 0;
+  outline: none;
+  width: responsiveSize(700, $desktopSize);
+  vertical-align: top;
+  margin: responsiveSize(10, $desktopSize);
+  background-color: #10c9c3;
+  font-size: responsiveSize(24, $desktopSize);
+  margin-left: responsiveSize(60, $desktopSize);
+}
+
+.header__menu {
+    width: 60%;
+    margin: 0 10%;
+    
+    .menu {
+        height: responsiveSize(30, $desktopSize);
+        .menu__list {
+            width: 100%;
+            display: inline-flex;
+            justify-content: space-between;
+            vertical-align: top;
+            .menu__item {
+                list-style-type: none;
+                
+                a{
+                    display: block;
+                    text-decoration: none;
+                    color: black;
+                    font-size: responsiveSize(24, $desktopSize);
+                    
+                    &:hover {
+                        color: rgb(72, 209, 204);
+                    }
+                }
+            }
+        }
+    }
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.search__icon {
+    display: block;
+    width: responsiveSize(30, $desktopSize);
+    height: responsiveSize(30, $desktopSize);
+    background: URL("../images/search.png") center no-repeat;
+    background-size: cover;
+    margin-top: responsiveSize(10, $desktopSize);
+}
+
+.basket__icon {
+    display: block;
+    margin-top: responsiveSize(10, $desktopSize);
+    width: responsiveSize(30, $desktopSize);
+    height: responsiveSize(30, $desktopSize);
+    background: URL("../images/basket.png") center no-repeat;
+    background-size: cover;
+}
+
+
+.basket__wrap {
+  border: responsiveSize(3, $desktopSize) solid rgb(72, 209, 204);
+  width: 90%;
+  margin: responsiveSize(100, $desktopSize);
+  border-bottom: 0;
+
+  .basket__item {
+    height: responsiveSize(200, $desktopSize);
+    text-align: center;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: responsiveSize(24, $desktopSize);
+    border-bottom: responsiveSize(3, $desktopSize) solid rgb(72, 209, 204);
+
+    div {
+      width: 17%;
+      padding: responsiveSize(70, $desktopSize) 0;
+      border-right: responsiveSize(3, $desktopSize) solid rgb(72, 209, 204);
+      height: responsiveSize(200, $desktopSize);
+    }
+
+    .item__image {
+      padding: responsiveSize(50, $desktopSize) 0;
+      img {
+        width: responsiveSize(100, $desktopSize);
+      }
+    }
+
+    .item__remove {
+      border: 0;
+      padding-left: responsiveSize(80, $desktopSize);
+
+      .close__button {
+        display: block;
+        height: responsiveSize(40, $desktopSize);
+        font-size: responsiveSize(26, $desktopSize);
+        width: responsiveSize(50, $desktopSize);
+        border: responsiveSize(3, $desktopSize) solid rgb(72, 209, 204);
+      }
+    }
+
+    .item__quantity {
+      display: inline-flex;
+      width: 17%;
+      padding-left: responsiveSize(30, $desktopSize);
+
+      .minus  {
+        width: responsiveSize(50, $desktopSize);
+        height: responsiveSize(40, $desktopSize);
+        border: responsiveSize(3, $desktopSize) solid rgb(72, 209, 204);
+      }
+
+      .plus {
+        height: responsiveSize(40, $desktopSize);
+        border: responsiveSize(3, $desktopSize) solid rgb(72, 209, 204);
+        width: responsiveSize(50, $desktopSize);
+      }
+
+      .count {
+        width: responsiveSize(50, $desktopSize);
+        height: responsiveSize(40, $desktopSize);
+        border: 0;
+        padding: 0;
+        border: responsiveSize(3, $desktopSize) solid rgb(72, 209, 204);
+
+      }
+    }
+  }
+}
+
+.empty {
+    font-size: responsiveSize(104, $desktopSize);
+    font-weight: 600;
+    text-align: center;
+    color: rgb(72, 209, 204);
+    margin: responsiveSize(500, $desktopSize) 0;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.footer__wrap {
+  width: 100%;
+  background-color: #141414;
+  padding: responsiveSize(100,$desktopSize);
+  display: inline-flex;
+  justify-content: space-between;
+  color: #bcbcbc;
+
+  .footer__info {
+    width: 20%;
+    .footer__title {
+      color: #fff;
+      font-weight: 600;
+      font-size: responsiveSize(24, $desktopSize);
+    }
+
+    .footer__description {
+      font-size: responsiveSize(16, $desktopSize);
+      margin-top: responsiveSize(5, $desktopSize);
+    }
+  }
+
+  .footer__mail {
+    width: 30%;
+    font-size: responsiveSize(20, $desktopSize);
+
+    .mail__number {
+      margin-top: responsiveSize(10, $desktopSize);
+    }
+  }
+
+  .footer__projects {
+    width: 15%;
+    font-size: responsiveSize(20, $desktopSize);
+
+    .project__list {
+      .project__item {
+        margin: responsiveSize(5, $desktopSize);
+        list-style-type: none;
+
+        a {
+          text-decoration: none;
+          color: #bcbcbc;
+        }
+      }
+    }
+  }
+
+  .footer__site {
+    width: 15%;
+    font-size: responsiveSize(20, $desktopSize);
+
+    .site__list {
+      .site__item {
+        margin: responsiveSize(5, $desktopSize);
+        list-style-type: none;
+
+        a {
+          text-decoration: none;
+          color: #bcbcbc;
+        }
+      }
+    }
+  }
+
+  .footer__links {
+    width: 15%;
+    font-size: responsiveSize(20, $desktopSize);
+
+    .links__list {
+      .links__item {
+        margin: responsiveSize(5, $desktopSize);
+        list-style-type: none;
+
+        a {
+          text-decoration: none;
+          color: #bcbcbc;
+        }
+      }
+    }
+  }
+}
